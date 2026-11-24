@@ -1,0 +1,130 @@
+Builders Program
+Analyze the Request:
+
+User wants a new idea/prototype to submit to the MyFundedPerps Builders Program (based on the provided prompt).
+
+The response needs to be in English.
+
+Crucial constraint: "Keep under 4000 characters" (The user wrote "chartered", likely a typo for "characters").
+
+The user previously saw a draft of "Sentinel AI" in English, but wants it refined and kept concise.
+
+Review the previous "Sentinel AI" idea:
+
+Concept: Natural Language Risk Copilot using MCP + WebSocket.
+
+Why it wins: Uses official MCP, WebSockets are free for market data, high demo value (AI + Trading).
+
+Form text: Needs to be punchy and fit the constraints.
+
+Word/Character Count Check: The previous response was way too long (>4000 chars). I need to condense it drastically while keeping the core value proposition and the copy-paste form answers.
+
+Drafting the Response (Iterative reduction):
+
+Introduction: Brief pitch for Sentinel AI.
+
+Form Copy: This is the most important part. Keep it tight.
+
+Tech Path: Brief 1-2-3 steps on how to build it for Starter tier.
+
+Let's count characters as I go.
+
+Drafting Form Text:
+
+Project Name: Sentinel AI
+
+Stage: Prototype
+
+Tech: API, MCP, WebSocket Streams
+
+Description (What it does): Sentinel AI is a natural-language risk copilot for traders. It connects Claude to the hosted MyFundedPerps MCP server, letting traders set rules in plain English (e.g., "auto-close half my ETH position if price drops below $3,000"). A Python daemon listens to the public WebSocket market stream to monitor prices 24/7, triggering REST API actions via MCP when rules are met. (403 chars)
+
+Problem Solved: Prop traders face strict drawdown rules but lack easy ways to automate protection without coding a full bot. Before this, setting a simple rule required manual monitoring. Sentinel AI lowers the barrier by translating natural language into automated, real-time risk execution through official MCP tools. (325 chars)
+
+Links: GitHub Repo (make an empty one), Demo Video link.
+
+Media: Architecture diagram (User -> AI -> MCP -> API / WS Daemon -> Trigger).
+
+Users: 0
+
+User Type: Prop traders, discretionary traders, AI builders.
+
+Tech Guide (How to build):
+
+Add MyFundedPerps MCP to Claude.
+Write a 50-line Python script using websockets to monitor wss://api-stream....
+Have the script alert you/AI when price triggers, and use Claude to execute the close via MCP.
+Review against constraints:
+
+English? Yes.
+
+Under 4000 characters? Yes, the whole response will be around 2500-3000 characters.
+
+New idea/Prototype? Yes, Sentinel AI.
+
+Fits the Builders Program requirements? Yes, targets Starter tier, uses API/MCP/WebSockets.
+
+Refining and Formatting: Make it clean, easy to read on mobile (since the user shared mobile screenshots), and explicitly state the character count/copy-paste boundaries.
+
+Here is the refined, concise English version of the Sentinel AI project idea, perfectly formatted to fit the MyFundedPerps Builders Program application.
+
+This response is kept well under the 4,000-character limit, ensuring you can easily copy and paste it into the form.
+
+🚀 New Prototype Idea: Sentinel AI — Natural Language Risk Copilot
+The Concept: An AI-powered risk tool that lets traders set rules in plain English (e.g., "Auto-close half my position if BTC drops below $65,000"). It uses a Python daemon to monitor the public WebSocket market stream, and when a rule triggers, it uses the official MyFundedPerps MCP server to execute the action via REST API.
+
+Why it wins: Most builders will make basic scripts. Building an MCP-native AI tool puts you ahead of the curve. It is easy to demo (AI + Trading) and shows immediate viral potential.
+
+📋 Copy-and-Paste for Your Application Form
+1. Where's Your Build At?
+Select: Prototype
+
+2. What Does It Use?
+Select: API, MCP, WebSocket Streams
+
+3. Project Name
+Sentinel AI
+
+4. What Does It Do?
+(Copy & paste)
+
+Sentinel AI is a natural-language risk copilot for MyFundedPerps traders. It connects Claude (or any MCP-capable AI) to the hosted MyFundedPerps MCP server, allowing traders to set risk rules in plain English—like “alert me if daily loss hits 1.5%” or “auto-close half my position if ETH drops below 3,000.” A lightweight Python daemon consumes the public WebSocket market stream to watch prices in real time, and when a rule triggers, it calls the REST API via MCP tools to execute the action (reduce, close, or flatten).
+
+5. What Problem Does It Solve?
+(Copy & paste)
+
+Prop traders face strict daily-loss and trailing-drawdown rules, but existing tools force them to monitor dashboards constantly or write complex code just to set a simple protective rule. Before Sentinel AI, a trader who wanted to “close my BTC long if it drops 2%” had to watch charts manually or build a full trading bot. Sentinel AI solves this by letting traders express risk rules in natural language, then enforcing them automatically through the official MCP server and real-time market data—lowering the technical barrier to automated risk protection.
+
+6. Project Links
+
+Repository: https://github.com/[your-username]/sentinel-ai (Create a blank public GitHub repo with this name right now and paste the link).
+
+7. Photos and Videos
+
+Upload a simple architecture diagram (drawn in Paint/Excalidraw):
+User Prompt -> Claude (MCP) -> REST API (Execute Trade)
+Python Daemon -> WebSocket (Price Monitor) -> Trigger Action
+
+Or take a screenshot of a chat prompt in Claude showing what the natural language rule looks like.
+
+8. Number of Users
+0
+
+9. Type of Users (Optional)
+Prop firm traders, discretionary day traders, and AI-agent builders who want to automate risk rules without writing a full bot.
+
+10. Your Details
+Fill in your Name, Email, and Socials.
+
+🛠️ How to Build the Prototype (Starter Level)
+You don't need a perfect system right now, just proof that the chain works:
+
+Setup MCP: Add the MyFundedPerps hosted MCP server to Claude Desktop or Cursor.
+
+Python Daemon: Write a 50-line Python script using websockets to listen to the public market data stream (wss://api-stream.myfundedperpetuals.com/v1/market-data).
+
+Trigger Logic: When the price hits your target, have the script print: "Price hit! Sending signal to AI..."
+
+Demo: Open Claude, use the MCP tools to pull your sandbox positions, and show the AI executing a close_position command.
+
+
